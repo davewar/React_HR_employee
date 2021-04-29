@@ -1,0 +1,415 @@
+:root{
+    --primary-colour: rgb(118, 118, 175);
+    --header-colour: rgb(235, 235, 245);
+ 
+ }
+
+
+*{
+  margin:0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.App{
+  background-color: snow;
+  min-height: 100vh;
+  width:100%;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+/* header component */
+.header{
+display: flex;
+flex-direction: row;
+background-color: var(--header-colour);
+height: 5vh;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 5px;
+
+}
+
+.header_h4{ 
+  margin: 5px;
+}
+
+.header > button{
+margin-right: 5px;
+
+}
+.link{
+color: white;
+text-decoration: none;
+
+}
+
+
+
+/* hide pern */
+.build{
+  display: none;
+
+}
+
+
+/* search component */
+
+.search{
+display: flex;
+flex-direction: row;
+height:5vh;
+width: 100%;
+align-items: center;
+justify-content: center;
+}
+
+form{
+    width: 80%; 
+}
+input{
+width: 70%;
+padding: 5px;
+border: 2px solid black;
+border-radius: 5px;
+color: var(--primary-colour);
+}
+
+.btn{
+border: solid black 2px;
+border-radius: 5px;
+padding: 5px;
+background-color: var(--primary-colour);
+color: white;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+
+.btn:hover {
+  background-color:rgb(248, 237, 237) ;
+    color:black;
+}
+.btn-edit{
+  background-color: rgba(235, 156, 11, 0.911);
+}
+.btn-delete{
+  background-color:red;
+}
+
+/* employee list component */
+
+.table_data{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+/* 
+ background-color: red; */
+
+}
+
+thead{
+  color:  var(--primary-colour);
+  border: 0px;
+  align-items: center;
+      
+}
+
+table{
+  border-spacing: 0px;
+  width:95%;
+  /* background-color: red; */
+}
+
+td{
+  text-align: center;
+  vertical-align: middle ;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  border-bottom: 2px solid black;
+  }
+
+  td{
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 150px !important; 
+  }
+ 
+.table_row:hover{
+    background-color:rgb(248, 237, 237) ;
+}
+
+.table_header:hover{
+  background-color:rgb(248, 237, 237) ;
+   cursor: pointer; 
+  font-weight: bold;
+}
+
+/* on hover dont style */
+.disabled{
+   pointer-events: none;
+}
+
+.no_items{
+color:  var(--primary-colour);
+font-weight: bold;
+margin-top: 20px;
+text-align: center;
+
+}
+
+/* add / amend employee component */
+
+.container{
+color: var(--primary-colour);
+width:100%;
+justify-content: center;
+align-content: center;
+
+}
+
+.text-center{
+  text-align: center;
+}
+
+.alert{
+  padding: 5px;
+  margin: 5px;
+}
+.alert-danger{
+  color: red;
+  background-color: rgb(246, 196, 196);
+}
+
+.text-danger{
+  color: red;
+  margin-top:10px;
+  font-weight: bold;
+}
+.text-success{
+  color: green;
+}
+
+.alert-success {
+  color: green;
+  background-color: rgb(169, 226, 169);
+}
+.text-capitalize{
+  text-transform: capitalize;
+ }
+
+ .form_add_employee{
+   
+   width:100%;
+   justify-content: center;
+   align-items: center; 
+ }
+ 
+ .form-group{
+   display: flex;
+   flex-direction: column;
+   width:95%;
+   margin-left: 20px;
+   /* background-color: red; */
+   padding:10px;
+   
+ }
+ 
+ .form-group > input{
+   width:100%;
+   display: flex;   
+   flex:1;
+   padding: 10px;
+   color:var(--primary-colour);
+  
+ }
+
+ input[type='text'] {
+    font-size: 12px;
+    font-weight: bold;
+
+}
+
+ input[type='email'] {
+    font-size: 12px;
+    font-weight: bold;
+
+}
+ 
+ /* radio btns */
+
+ .form-check{
+   /* background-color: red; */
+   padding: 10px;
+   display: flex;
+   justify-content: center; 
+   margin: 0 auto;   
+   width:50%;
+ }
+
+ .radio{
+  margin-left:10px;
+  text-align: center;
+ }
+ 
+  input[type='radio']{
+    height: 15px;;
+        border-color: var(--primary-colour); ;
+        background-color: var(--primary-colour);
+  }     
+
+ .save-btn{
+   display: inline-block;
+   padding:10px;
+  
+ }
+
+ #btn-save{
+   margin: 25px;
+    
+ }
+
+
+
+
+/* tablet */
+@media screen and (min-width: 576px){
+
+  /* .App{
+      background-color: pink;
+     
+  } */
+
+  .header{ 
+    height: 10vh;  
+  }
+
+  .header_h4{ 
+    margin-left: 30px;
+      font-size: 2.5rem;
+     
+  }
+
+  .header > button{
+  margin-right: 40px;
+
+  }
+
+  td,th{
+
+  font-size: 1rem;
+  padding: 1.rem;
+
+  }
+
+  tr{
+    overflow: hidden;
+    white-space: nowrap;
+    /* max-width: 250px !important;  */
+  }
+  
+
+  /* ahhh! */
+
+  .build{
+  display: flex;
+  flex-direction: column;
+  margin-right: 2%;
+  font-weight: bold;
+  color:var(--primary-colour);  
+  }
+
+  
+  li::first-letter{
+       text-decoration-line: underline;    
+       font-weight: bold ;
+  }
+
+  ul{
+    list-style-type: none;  
+  }
+  #btn-save{
+    margin-left: 35px;
+  }
+
+  
+}
+
+
+/* pcmonitor */
+@media screen and (min-width: 768px){
+
+    /* .App{
+      background-color: red;
+    } */
+
+  .header{ 
+    height: 15vh;  
+  }
+  
+  .header_h4{ 
+    margin-top: 20px;;
+    margin-left: 50px;
+    font-size: 3rem;     
+  }
+
+  .header > button{
+  margin-right: 60px;
+  }
+
+  td,th{
+
+  font-size: 1.1rem;
+  padding: 1rem;
+
+  }
+
+  /* add/amend */
+ .form_add_employee{
+   /* background-color: red; */
+   width:80%;
+   margin-left:10%;
+    margin-right:10%;
+   justify-content: center;
+   align-items: center; 
+ }
+ 
+ .form-group{
+   display: flex;
+   flex-direction: column;
+   width:95%;
+   margin: 10px auto;
+   /* margin-left: 90px;
+   margin-right: 90px; */
+   /* background-color: red; */
+   padding:10px;
+   
+ }
+ 
+ .form-group > input{
+   width:100%;
+   display: flex;   
+   flex:1;
+   padding: 10px;
+ }
+
+
+    /* ah! */
+
+ .build{
+   margin-right: 5%;
+
+  }
+   #btn-save{
+    margin-left: 50px;
+  }
+
+
+}
+
+
+
