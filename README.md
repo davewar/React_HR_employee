@@ -50,7 +50,11 @@ some commands:
 \c nameofdatabase   <<connect to the db>>
 \d
 \dt
-\d table name 
+\d table name
+\l list of databases
+
+if you get this message for a command: 'more' is not recognized as an internal or external' command, operable program or batch file.
+** To fix run:  arthur=> \pset pager off **
 
 SET UP EXPRESS / NODE-POSTGRES usefull links:
 
@@ -70,7 +74,6 @@ c) login into heroku
     c) heroku pg:psql -a name-of-website      (<===connects to db and creates process.env.DATABASE_URL ) 
     d) add employees table to the heroku database created in step c.
     cat database.sql | pg:psql -a name-of-website
-    
 
 
 
